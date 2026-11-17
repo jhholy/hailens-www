@@ -1,3 +1,6 @@
+/assets/sample.pdf
+  Content-Disposition: attachment; filename="HaiLens-sample.pdf"
+
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
