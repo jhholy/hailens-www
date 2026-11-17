@@ -370,3 +370,7 @@ hr{border:0;border-top:1px solid var(--rule)}
   .principles .quote p{font-size:18px}
   .principles .pr-block{padding-top:52px;padding-bottom:56px}
 }
+
+/* ---------- 首屏补充说明 / 直连说明 ---------- */
+.hero-note{margin-top:14px;font-size:13px;color:var(--ink-3);line-height:1.75;letter-spacing:.02em;max-width:720px}
+.direct-line{margin-top:20px;font-size:13.5px;color:var(--ink-2);line-height:1.7}
