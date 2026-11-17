@@ -21,7 +21,7 @@ hr{border:0;border-top:1px solid var(--rule)}
 /* ---------- 顶栏 ---------- */
 .top{padding-top:26px;padding-bottom:26px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;border-bottom:1px solid var(--rule)}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand svg{display:block}
+.brand svg,.brand img{display:block;width:auto}
 .brand .name{font-size:19px;font-weight:500;letter-spacing:-.4px}
 .top .mail{font-size:13px;color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;white-space:nowrap}
 .top .mail:hover{color:var(--ink);border-bottom-color:var(--ink)}
