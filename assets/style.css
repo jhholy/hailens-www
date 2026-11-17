@@ -373,7 +373,6 @@ hr{border:0;border-top:1px solid var(--rule)}
 
 /* ---------- 首屏补充说明 / 直连说明 ---------- */
 .hero-note{margin-top:14px;font-size:13px;color:var(--ink-3);line-height:1.75;letter-spacing:.02em;max-width:720px}
-.direct-line{margin-top:20px;font-size:13.5px;color:var(--ink-2);line-height:1.7}
 
 /* ---------- 卡片价格 ---------- */
 .card .price{font-size:14px;color:var(--ink);font-weight:600;letter-spacing:.02em;margin-top:10px;line-height:1.7}
@@ -387,6 +386,3 @@ hr{border:0;border-top:1px solid var(--rule)}
   .brand .tagline{min-width:0;white-space:normal;max-width:210px;line-height:1.35}
   .sec-head .en{display:none}
 }
-/* ---------- 行内「关于」链接 ---------- */
-.inline-go{margin-left:10px;color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;white-space:nowrap}
-.inline-go:hover{border-bottom-color:var(--ink);color:var(--ink)}
