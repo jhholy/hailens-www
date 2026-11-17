@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers 静态站点配置
+  // 仓库根就是站点根：index.html 在根目录
+  "name": "hailens-www",
+  "compatibility_date": "2026-11-16",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "404-page"
+  }
+}
