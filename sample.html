@@ -52,8 +52,16 @@ h1,h2{scroll-margin-top:16px}
              padding:7px 14px;background:var(--paper)}
   .jumpbar a.pri{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 }
+
+/* 品牌锁定 + 桌面回顶 */
+.brand .lockup{display:flex;flex-direction:column;gap:2px;line-height:1.25}
+.brand .tagline{font-size:10px;color:var(--ink3);letter-spacing:.02em}
+.totop{position:fixed;right:22px;bottom:26px;z-index:40;width:38px;height:38px;display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--rule);background:var(--paper-hi);color:var(--ink2);text-decoration:none;font-size:15px}
+.totop:hover{border-color:var(--ink);color:var(--ink)}
+@media(max-width:700px){.totop{display:none}.brand .tagline{display:none}}
 </style></head><body id="top">
-<header class="top"><a class="brand" href="index.html"><img src="assets/logo/hailens_mark_small.svg" alt="" width="18" height="18">海镜 HaiLens</a><div class="r"><a href="assets/sample.pdf" download class="dl">下载 PDF</a><a href="index.html">回首页</a><a href="apply.html">申请定制</a></div></header>
+<header class="top"><a class="brand" href="index.html"><img src="assets/logo/hailens_mark_small.svg" alt="" width="18" height="18"><span class="lockup"><span>海镜 HaiLens</span><span class="tagline">在见一家海外经销商之前，把这一家查清楚。</span></span></a><div class="r"><a href="assets/sample.pdf" download class="dl">下载 PDF</a><a href="index.html">回首页</a><a href="apply.html">申请定制</a></div></header>
 <main class="page">
 <h1 id="sec1">某 IVD 企业 × 沙特 × Dar Al Zahrawi Medical Co LLC：这家经销商值不值得谈</h1>
 <blockquote>
@@ -716,4 +724,5 @@ h1,h2{scroll-margin-top:16px}
 </main>
 <footer class="foot"><span>海镜 HaiLens ｜ 合作邮箱：hji@hailenslab.com</span><span>公开示例：目标企业名与品牌已脱敏；数据与方法未改。</span></footer>
 <div class="jumpbar"><a class="pri" href="assets/sample.pdf" download>下载 PDF</a><a href="apply.html">申请定制</a><a href="#top">回到顶部</a></div>
+<a class="totop" href="#top" aria-label="回到顶部">↑</a>
 </body></html>
