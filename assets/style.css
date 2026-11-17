@@ -387,3 +387,6 @@ hr{border:0;border-top:1px solid var(--rule)}
   .brand .tagline{min-width:0;white-space:normal;max-width:210px;line-height:1.35}
   .sec-head .en{display:none}
 }
+/* ---------- 行内「关于」链接 ---------- */
+.inline-go{margin-left:10px;color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;white-space:nowrap}
+.inline-go:hover{border-bottom-color:var(--ink);color:var(--ink)}
