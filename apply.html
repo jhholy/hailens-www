@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>申请定制判断 · 海镜 HaiLens</title>
+<meta name="description" content="申请定制判断：按你的市场与经销商重做，两个工作日内回复能否承接、报价与周期。">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="wrap top">
+  <a class="brand" href="index.html">
+    <svg width="30" height="30" viewBox="0 0 96 96" aria-hidden="true">
+      <path d="M48 27.51A26 26 0 0 1 48 68.49A26 26 0 0 1 48 27.51Z" fill="#10161A"/>
+      <circle cx="30" cy="48" r="26" fill="none" stroke="#10161A" stroke-width="9"/>
+      <circle cx="66" cy="48" r="26" fill="none" stroke="#10161A" stroke-width="9"/>
+    </svg>
+    <span class="name">HaiLens</span>
+  </a>
+  <nav class="nav" aria-label="主导航">
+    <a href="principles.html">方法</a>
+    <a href="faq.html">常见问题</a>
+    <a href="about.html">谁在做</a>
+    <a href="apply.html" aria-current="page">申请</a>
+  </nav>
+  <a class="mail" href="mailto:hji@hailenslab.com">hji@hailenslab.com</a>
+</header>
+<main>
+<section class="wrap sec" id="apply">
+    <div class="sec-head">
+            <h2>申请定制判断</h2>
+      <span class="en">Request a quote</span>
+    </div>
+
+    <div class="form-wrap">
+      <div>
+        <p class="body">
+          提交几项信息。我们会在两个工作日内回复：<b>是否能承接、报价与周期</b>。
+        </p>
+        <p class="body">
+          定制判断按市场与经销商范围报价。
+        </p>
+        <div class="reply">
+          <div class="lbl">回复会说明</div>
+          <ol>
+            <li>是否符合服务范围。不适合会直说。</li>
+            <li>报价、交付周期，以及需要你补充的材料。</li>
+            <li>如果还想先看样品，<a href="assets/sample.pdf">直接下载</a>。</li>
+          </ol>
+        </div>
+        <p class="body" style="margin-top:32px;font-size:14px;color:var(--ink-3)">
+          不方便填表？发邮件到
+          <a href="mailto:hji@hailenslab.com" style="color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule)">hji@hailenslab.com</a>。
+          写上公司、目标市场和经销商；还没选定经销商，也可以说明。
+        </p>
+      </div>
+
+      <form class="form" id="lead-form" action="https://formsubmit.co/hji@hailenslab.com" method="POST">
+        <input type="hidden" name="_subject" value="定制咨询 · 海镜 HaiLens 经销商判断">
+        <input type="hidden" name="_next" value="https://hailenslab.com/thanks.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <div class="hp" aria-hidden="true">
+          <label for="_honey">请勿填写</label>
+          <input type="text" id="_honey" name="_honey" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="field">
+          <label for="company">公司名称</label>
+          <input id="company" name="company" type="text" required autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="website">公司官网</label>
+          <input id="website" name="website" type="text" required placeholder="没有就写「没有」" autocomplete="url">
+        </div>
+        <div class="field">
+          <label for="market">目标国家 / 地区</label>
+          <input id="market" name="market" type="text" required placeholder="例：沙特、德国、印尼">
+        </div>
+        <div class="field">
+          <label for="dealer">目标经销商 <span class="opt">选填</span></label>
+          <input id="dealer" name="dealer" type="text" placeholder="还没选定？留空即可，我们会根据公开信息判断能否协助筛选">
+        </div>
+        <div class="field">
+          <label for="stage">你想先解决哪一段 <span class="opt">选填</span></label>
+          <select id="stage" name="stage">
+            <option value="">还没定，先聊</option>
+            <option value="市场进入判断">市场进入判断</option>
+            <option value="经销商或供应商判断">经销商或供应商判断</option>
+            <option value="谈判陪跑">谈判陪跑</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="email">联系邮箱</label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="note">你现在最想确认什么 <span class="opt">选填</span></label>
+          <textarea id="note" name="note" rows="2" placeholder="例：对方要求独家代理，我该重点确认什么？"></textarea>
+        </div>
+
+        <button class="btn" type="submit">提交咨询</button>
+        <p class="fine">
+          提交后，我们会在两个工作日内邮件回复。超过两个工作日仍未收到，请直接联系
+          <a href="mailto:hji@hailenslab.com" style="color:var(--ink)">hji@hailenslab.com</a>。
+          你提供的信息仅用于处理本次申请，不会转交他人。
+        </p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="wrap foot">
+  <div class="l">季虹伊 Hongyi Ji ｜ 海镜 HaiLens · 出海策略顾问 ｜ <a href="mailto:hji@hailenslab.com">hji@hailenslab.com</a></div>
+  <div class="r"><a href="faq.html">常见问题</a> · <a href="principles.html">五条判断守则</a> · <a href="index.html">首页</a> · <a href="mailto:hji@hailenslab.com">邮箱</a> · © 2026 HaiLens</div>
+</footer>
+</body>
+</html>

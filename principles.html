@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>五条判断守则：我们做判断时，不变的五件事</title>
+<style>
+  :root{
+    --ink:#10161A; --ink2:#4A5158; --ink3:#8A8F8C;
+    --paper:#F4F2ED; --paper-hi:#FBFAF7; --rule:#D5D1C6;
+    --accent:#14504B; --alert:#B4501E;
+    --serif:'Songti SC','Source Han Serif SC','Noto Serif SC',Georgia,serif;
+    --sans:'Inter','PingFang SC','Helvetica Neue',Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;-webkit-font-smoothing:antialiased}
+  .page{max-width:1000px;margin:0 auto;padding:56px 64px 44px}
+  .kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+  h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.6vw,54px);line-height:1.25;letter-spacing:2px;margin:14px 0 0}
+  .sub{font-family:var(--serif);font-size:21px;line-height:1.7;color:var(--ink2);margin-top:14px;letter-spacing:.4px}
+  .lede{max-width:760px;margin-top:22px;font-size:16.5px;line-height:1.95;color:var(--ink2)}
+  .lede b{color:var(--ink);font-weight:600}
+  .chain-note{margin-top:16px;padding-left:14px;border-left:2px solid var(--accent);font-family:var(--serif);font-size:17px;line-height:1.9;color:var(--ink2)}
+  hr{border:0;border-top:1px solid var(--rule);margin:36px 0}
+
+  .item{display:grid;grid-template-columns:92px 1fr;gap:26px;padding:30px 0;border-top:1px solid var(--rule)}
+  .item:first-of-type{border-top:0}
+  .no{font-family:var(--serif);font-size:44px;line-height:1;color:var(--accent);letter-spacing:-1px}
+  .no small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.16em;color:var(--ink3);margin-top:8px}
+  h2{font-family:var(--serif);font-size:25px;font-weight:500;letter-spacing:.5px}
+  .principle{font-size:16px;line-height:1.9;color:var(--ink);margin-top:8px;max-width:760px}
+  .principle b{font-weight:600}
+  .why{font-size:13.5px;line-height:1.8;color:var(--ink2);margin-top:8px;max-width:760px}
+  .ex{margin-top:14px;background:var(--paper-hi);border-left:2px solid var(--rule);padding:12px 16px;font-size:13px;line-height:1.8;color:var(--ink2);max-width:820px}
+  .ex .lbl{font-size:10.5px;letter-spacing:.14em;color:var(--ink3);text-transform:uppercase;display:block;margin-bottom:3px}
+  .ex b{color:var(--ink);font-weight:600}
+
+  .check{margin-top:34px;background:var(--ink);color:var(--paper);padding:28px 32px}
+  .check h3{font-family:var(--serif);font-size:20px;font-weight:400;letter-spacing:.5px}
+  .check ol{margin:14px 0 0 18px;font-size:14px;line-height:1.9;color:#D8DFDB}
+  .check li{padding:4px 0}
+  .check b{color:#fff;font-weight:600}
+
+  .quote{margin-top:34px;padding:24px 28px;border-left:2px solid var(--accent);background:var(--paper-hi)}
+  .quote p{font-family:var(--serif);font-size:20px;line-height:1.85;letter-spacing:.4px}
+
+  .honest{margin-top:26px;border:1px solid var(--rule);padding:16px 18px;font-size:13px;color:var(--ink2);line-height:1.8}
+  .honest b{color:var(--ink)}
+  .fine{margin-top:24px;font-size:12px;color:var(--ink3);line-height:1.8;max-width:840px}
+  .foot{display:flex;justify-content:space-between;align-items:baseline;margin-top:34px;padding-top:14px;border-top:1px solid var(--rule);font-size:12.5px;color:var(--ink3)}
+  .foot .name{color:var(--ink);font-size:13px}
+
+  .topline{margin-bottom:18px;display:flex;gap:10px;font-size:12px;color:var(--ink3)}
+  .topline a{color:var(--ink3);text-decoration:none;border-bottom:1px solid var(--rule)}
+  .topline a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+  .methods,.scope{margin-top:34px}
+  .methods h2,.scope h2{font-family:var(--serif);font-size:24px;font-weight:400;letter-spacing:.5px;margin:0 0 8px}
+  .plain{list-style:none;margin-top:12px}
+  .plain li{padding:10px 0;border-top:1px solid var(--rule);font-size:14px;line-height:1.8;color:var(--ink2)}
+  .plain li b{color:var(--ink);font-weight:600}
+  .scope ul{list-style:none;margin-top:10px}
+  .scope li{padding:9px 0;border-top:1px solid var(--rule);font-size:14px;line-height:1.8;color:var(--ink2)}
+  .scope li b{color:var(--ink)}
+  .scope .cta-line{margin-top:18px;font-size:14px}
+  .scope .cta-line a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent)}
+
+
+  @media (max-width:820px){
+    .page{padding:32px 22px 28px}
+    .item{grid-template-columns:56px 1fr;gap:14px;padding:24px 0}
+    .no{font-size:30px}
+    h1{font-size:34px}
+  }
+  @media print{
+    @page{size:A4;margin:10mm}
+    body{background:#fff}
+    .page{max-width:none;padding:0;zoom:.62}
+    .item,.check,.quote,.honest{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <div class="topline"><a href="index.html">← 首页</a><span>·</span><a href="faq.html">常见问题</a><span>·</span><a href="apply.html">申请</a></div>
+
+  <div class="kicker">我们的判断原则 · 2026-11-15</div>
+  <h1>五条判断守则</h1>
+  <div class="sub">客户会变，市场会变，模型会变；这五条不变。</div>
+  <p class="lede">
+    我们的每一份策略定稿，都按这五条做。每条配一个定稿例子——<b>例子是说明，值得检查的是原则本身。</b>
+  </p>
+  <p class="chain-note">出海是一条长链路，每一步都成为下一步的前提。这五条不是流程洁癖，是防止一个错前提进入下一步。</p>
+
+  <hr>
+
+  <section class="item">
+    <div class="no">01<small>MERGE</small></div>
+    <div>
+      <h2>同源归并</h2>
+      <p class="principle">同一个来源被转述多少次，都只算一条。<b>先并回原始出处，再决定这条能承多重。</b></p>
+      <p class="why">不并，就会把「三篇转载」看成「三个来源」，把一篇官网稿看成行业共识。</p>
+      <div class="ex"><span class="lbl">在一份免疫线定稿里</span>同一份 NUPCO 公告里的两条记录，在台账里只算一个来源：<b>独立来源数：1</b>，并注明「与另一条试剂记录同源」。</div>
+    </div>
+  </section>
+
+  <section class="item">
+    <div class="no">02<small>COUNT</small></div>
+    <div>
+      <h2>独立来源计数</h2>
+      <p class="principle">每条承重结论，标明几个互相独立的来源。<b>多数只有 1 个——就写 1，不凑。</b></p>
+      <p class="why">写 1 不是弱点，是告诉读者：这条只靠一份材料，别把它当三份用。</p>
+      <div class="ex"><span class="lbl">在一份血糖定稿里</span>一条资质判断标的是「独立来源数：2」——SFDA 持证机构清单 + 对方官网联系页，两个域名；同一份清单里的多行许可只算一个来源。</div>
+    </div>
+  </section>
+
+  <section class="item">
+    <div class="no">03<small>TIER</small></div>
+    <div>
+      <h2>信源分级</h2>
+      <p class="principle"><b>A 是官方或监管原始清单；B+ 是可开原页的公司自述或媒体；B 只作旁证，不承重。</b></p>
+      <p class="why">不分级，就会把集团层的合作、UAE 的活动、第三方目录的地址，写成沙特实体的现状。</p>
+      <div class="ex"><span class="lbl">在一份经销商定稿里</span>集团官网的合作公告标 <b>B+</b>，只写「集团层已有」；NUPCO 原始中标公告标 <b>A</b>，才用来支撑「它在这一格有/没有供货」。</div>
+    </div>
+  </section>
+
+  <section class="item">
+    <div class="no">04<small>LEDGER</small></div>
+    <div>
+      <h2>主张—证据台账</h2>
+      <p class="principle">每条主张挂一条证据：<b>逐字原文、出处与日期、等级、独立来源数、这条不能证明什么、这条会错的情形。</b></p>
+      <p class="why">七项里少一项，这条就从「可核」退回「只能信」。</p>
+      <div class="ex"><span class="lbl">在一份免疫线定稿里</span>一条「未见某类整机」的判断，下面挂的是 <b>119 行逐行归类</b>，原文只作节选；「不能证明什么」写明「只覆盖这份 2023 年公告数过的范围」。</div>
+    </div>
+  </section>
+
+  <section class="item">
+    <div class="no">05<small>REVIEW</small></div>
+    <div>
+      <h2>独立复核</h2>
+      <p class="principle">写稿的人不判自己的稿。<b>复核从原始页面重开，不引用写稿人的结论。</b></p>
+      <p class="why">自己审自己，只会审出「读起来顺不顺」，审不出「这一步推没推过头」。</p>
+      <div class="ex"><span class="lbl">在一份定稿的复核里</span>复核员重放了原始 PDF 与 119 行，没采用写稿人的归类；判词挂在版本与文件指纹上，不挂在文件名上。</div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="methods">
+    <h2>五项核查</h2>
+    <p class="why">每一项都写进判断；核不到就写核不到。</p>
+    <ol class="plain">
+      <li><b>资质与许可</b>　注册证、经营范围、进口许可，标明有效期与发证机构。</li>
+      <li><b>代理品牌与竞品</b>　公开渠道能查到的代理品牌；排他条款公开查不到，只能见面问。</li>
+      <li><b>经营与覆盖能力</b>　团队、医院与科室覆盖、采购、仓储冷链、售后。</li>
+      <li><b>公开风险记录</b>　诉讼、召回、处罚、欠款；未检出不代表不存在。</li>
+      <li><b>首轮谈判准备</b>　双方需求、可能的异议、开场问什么。</li>
+    </ol>
+  </section>
+
+  <section class="scope">
+    <h2>服务范围与边界</h2>
+    <p class="why">能接的三段：市场进入判断 / 供应商与经销商判断 / 谈判陪跑；定制判断，从一家经销商开始。</p>
+    <ul>
+      <li><b>只要名单，不需要核查？</b>　我们不批量提供名单。每次围绕一家经销商核查，写明判断依据。</li>
+      <li><b>还没确定目标市场？</b>　可以先做市场进入判断；市场定了，再查当地经销商。</li>
+      <li><b>需要法律意见或销量保证？</b>　不在服务范围。谈判可以陪跑，但上桌做决定的是你。</li>
+    </ul>
+    <p class="cta-line"><a href="apply.html">申请定制判断 →</a>　<a href="faq.html" style="margin-left:14px">常见问题 →</a></p>
+  </section>
+
+  <section class="check">
+    <h3>你可以这样检查我们</h3>
+    <ol>
+      <li>随便挑一条结论，问：<b>原文在哪一页、哪一行？</b></li>
+      <li>再问：<b>它有几个独立来源？</b>是不是把转载算成了第二个？</li>
+      <li>最后问：<b>它不能证明什么、什么时候会错？</b>答不出来，这条就不该承重。</li>
+    </ol>
+  </section>
+
+  <div class="quote">
+    <p>原则不是用来讲的，是用来被检查的。</p>
+  </div>
+
+  <div class="honest">
+    <b>这五条不保证我们不犯错。</b>数字读错、主体读错、链接指向的页面与正文数字不一致，都出现过。
+    它们保证的是另一件事：<b>错了你能当场看见</b>——每条都挂原文与等级，你可以点开、对、然后决定信不信。
+  </div>
+
+  <p class="fine">
+    例子来自已定稿的经销商判断，按原则匿名引用，不指向任何一家具体客户；对象为 Dar Al Zahrawi（CR 7001453930），不是替任何一家企业选定的经销商。贵司点名一家，按同一套五条重做。
+  </p>
+
+  <div class="foot">
+    <span class="name">海镜 HaiLens · 出海策略顾问</span>
+    <span>季虹伊 Hongyi Ji · hji@hailenslab.com</span>
+    <span><a href="faq.html" style="color:inherit;border-bottom:1px solid var(--rule);text-decoration:none">常见问题</a></span>
+  </div>
+
+</main>
+</body>
+</html>
