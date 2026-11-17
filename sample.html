@@ -25,22 +25,74 @@ hr{border:0;border-top:1px solid var(--rule);margin:22px 0}
 a{color:var(--accent)}
 .foot{max-width:960px;margin:0 auto;padding:18px 28px 40px;border-top:1px solid var(--rule);font-size:12px;color:var(--ink3);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media(max-width:700px){.page{padding:24px 18px 40px}.top{padding:16px 18px}table{font-size:10.5px}}
-</style></head><body>
+
+/* ---------- 可读性 ---------- */
+.page{max-width:820px}
+p,li{font-size:15px;line-height:1.95;margin:8px 0}
+h1{margin:48px 0 16px}
+h1:first-of-type{margin-top:0}
+h1,h2{scroll-margin-top:16px}
+.toc{margin:22px 0 6px;border:1px solid var(--rule);background:var(--paper-hi);padding:0 16px}
+.toc summary{cursor:pointer;padding:12px 0;font-size:13px;color:var(--ink2);letter-spacing:.04em;list-style:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc summary::before{content:"▸ ";color:var(--ink3)}
+.toc[open] summary::before{content:"▾ "}
+.toc ol{margin:0 0 14px;padding-left:18px;columns:2;column-gap:28px}
+.toc li{font-size:13.5px;line-height:1.95;color:var(--ink2);break-inside:avoid;margin:0}
+.toc a{color:var(--ink2);text-decoration:none;border-bottom:1px solid transparent}
+.toc a:hover{border-bottom-color:var(--rule)}
+.toc .toc-h1{color:var(--ink);font-weight:600;margin-top:6px}
+@media(max-width:700px){.toc ol{columns:1}}
+.jumpbar{display:none}
+@media(max-width:700px){
+  body{padding-bottom:60px}
+  .jumpbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;gap:8px;justify-content:center;
+           background:var(--paper-hi);border-top:1px solid var(--rule);padding:8px 12px}
+  .jumpbar a{font-size:13px;text-decoration:none;color:var(--ink);border:1px solid var(--rule);
+             padding:7px 14px;background:var(--paper)}
+  .jumpbar a.pri{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+}
+</style></head><body id="top">
 <header class="top"><a class="brand" href="index.html"><img src="assets/logo/hailens_mark_small.svg" alt="" width="18" height="18">海镜 HaiLens</a><div class="r"><a href="assets/sample.pdf" download class="dl">下载 PDF</a><a href="index.html">回首页</a><a href="apply.html">申请定制</a></div></header>
 <main class="page">
-<h1>某 IVD 企业 × 沙特 × Dar Al Zahrawi Medical Co LLC：这家经销商值不值得谈</h1>
+<h1 id="sec1">某 IVD 企业 × 沙特 × Dar Al Zahrawi Medical Co LLC：这家经销商值不值得谈</h1>
 <blockquote>
 <p>公开示例：目标企业名与品牌已脱敏；数据与方法未改。</p>
 </blockquote>
 <p>海镜 HaiLens ｜ 合作邮箱：hji@hailenslab.com</p>
 <p><strong>这是样例，不是替贵司选定的那一家。</strong> Dar Al Zahrawi 是海镜从公开信息里挑的一家沙特经销商，用来演示这套判断怎么做；贵司点名一家，海镜按同一套重做。</p>
+<details class="toc">
+<summary>目录：19 节 · 点开跳转</summary>
+<ol>
+<li class="toc-h1"><a href="#sec1">某 IVD 企业 × 沙特 × Dar Al Zahrawi Medical Co LLC：这家经销商值不值得谈</a></li>
+<li class="toc-h1"><a href="#main">主报告</a></li>
+<li><a href="#sec3">0.5 这份报告回答三个问题</a></li>
+<li><a href="#sec4">1 一页结论</a></li>
+<li><a href="#sec5">2 六个判断</a></li>
+<li><a href="#sec6">3 经销商五项核查</a></li>
+<li><a href="#sec7">4 异议应对表（按对话阶段排）</a></li>
+<li><a href="#sec8">5 开场与禁区</a></li>
+<li><a href="#sec9">6 见面前五分钟</a></li>
+<li><a href="#sec10">7 边界与责任</a></li>
+<li><a href="#sec11">8 接下来 90 天</a></li>
+<li class="toc-h1"><a href="#appendix">附件</a></li>
+<li><a href="#sec13">A 证据附录</a></li>
+<li><a href="#sec14">A 附：约束表（对方可能这样拒）</a></li>
+<li><a href="#sec15">附：本附录没做的事</a></li>
+<li><a href="#sec16">B 同名与近名实体排除</a></li>
+<li><a href="#sec17">C 覆盖表：查不到的也列</a></li>
+<li><a href="#sec18">D 漏查自评：最可能漏在哪</a></li>
+<li><a href="#sec19">E 最弱的一环</a></li>
+</ol>
+</details>
+
 <p><strong>这家是谁</strong>：Dar Al Zahrawi Medical Co LLC，沙特商业注册号（CR，沙特给一家公司的唯一身份号，查官方库用它最准）7001453930。总部利雅得，Al Olaya 的 Takhassusi 街 Prestige Center，电话 +966 11 2305533；官网 zahrawigroup.com。在沙特药监局（SFDA，管医疗器械注册与进口）持 45 张许可（44 张器械类、1 张药品仓；器械类分授权代表、进口分销、仓库、维护几类）：41 张授权代表（AR，沙特本地持证公司；沙特规定境外厂商每一品类或通用组必须指定一名持牌 AR；注册证挂在厂商自己还是 AR 名下，是本报告的第一个要确认的问题）、1 张进口分销、2 张器械仓、1 张药品仓，最新一张授权代表许可到 2029-10-31。母公司 Zahrawi Group（集团，迪拜起家，阿联酋、沙特、卡塔尔、巴林、阿曼五国自营；沙特实体就是上面这家）。<strong>下文写「集团」都指 Zahrawi Group，不是贵司集团。</strong></p>
 <p><strong>值得谈，但只能按已注册的荧光 POCT（床旁即时检测）与干生化试纸谈。</strong> 谈之前先定两件事：贵司产品的注册证挂在谁名下、现有代理排不排他。</p>
 <p><strong>前置选择</strong>：市场选沙特（贵司把沙特列进 2026 年重点突破国家；公立走 NUPCO，即沙特国家统一采购公司、公立医院集中采购平台；私立是另一条线）；产品线选 SFDA 已注册的荧光 POCT 与干生化试纸（化学发光、单人份发光在沙特无注册）。<strong>换市场或换产品线，第 2、3 节要重做，第 1 节结论重出。</strong></p>
 <p>信息截止：2026-11-15</p>
 <hr />
-<h1>主报告</h1>
-<h2>0.5 这份报告回答三个问题</h2>
+<h1 id="main">主报告</h1>
+<h2 id="sec3">0.5 这份报告回答三个问题</h2>
 <ol>
 <li>这家经销商是谁，能不能替贵司把货卖进沙特。</li>
 <li>跟它谈，值不值得投入样机、培训和首单。</li>
@@ -48,7 +100,7 @@ a{color:var(--accent)}
 </ol>
 <p>读法：先看第 1 节，够做决定；想核依据，翻到附件 A。其余术语首现都带半句：SFDA（沙特药监局）、AR（授权代表）、CR（沙特商业注册号）、POCT（床旁即时检测）、NUPCO（公立集中采购）、QMS（质量管理体系，这里指 ISO 13485）。</p>
 <hr />
-<h2>1 一页结论</h2>
+<h2 id="sec4">1 一页结论</h2>
 <p><strong>结论：值得谈。但谈的不是区域总代，是一条新开的床旁线；而且在谈条件之前，先定注册证归属与现有代理的排他。</strong></p>
 <p><strong>三条理由</strong></p>
 <ul>
@@ -69,7 +121,7 @@ a{color:var(--accent)}
 <li>开场别报区域总代，报「一条线、一个城市、一台荧光 POCT 分析仪加首批试剂」。</li>
 </ol>
 <hr />
-<h2>2 六个判断</h2>
+<h2 id="sec5">2 六个判断</h2>
 <p><strong>判断一：它能替贵司办准入，也能做持证方；但注册证挂在谁名下，是第一问。</strong>
 为什么：SFDA 持证机构清单按 CR 7001453930 查出 45 张许可：41 张授权代表、1 张进口分销、2 张器械仓、1 张药品仓，最新一张授权代表许可到 2029-10-31，清单里没有器械维护许可。沙特规定境外厂商每一品类或通用组必须指定一名持牌授权代表；它持 41 张，本身就是能做这个角色的主体。¹
 这对贵司意味着：「货怎么进沙特」这一段不用自己搭；更值钱的是授权代表这一格，谈的不只是分销一条线，还可以是「注册证挂谁名下」。
@@ -95,7 +147,7 @@ a{color:var(--accent)}
 这对贵司意味着：不能按「窗口还没开」讲，也不能说已经开标；先问对方这一轮投没投。未截止，现在谈正是时候；已截止且贵司未投，落点改成下一轮加私立终端与试单。
 什么情况下不成立：这一轮投标期已截止而贵司未投，失效的不是「谈」，是「按这一轮标谈」；NPT0025/26 与年度招标计划第 10 项是否同一个标，公开信息未见一一对应的说明。</p>
 <hr />
-<h2>3 经销商五项核查</h2>
+<h2 id="sec6">3 经销商五项核查</h2>
 <p>这五项只查这家经销商，不评贵司；贵司在沙特的准入与代理关系，只在需要对照的地方点一句。</p>
 <p><strong>资质｜能办准入，也能做持证方，但 QMS 证书待核。</strong>
 事实：45 张许可 = 41 授权代表 + 1 进口分销 + 2 器械仓 + 1 药品仓，最新一张授权代表许可到 2029-10-31；清单里没有器械维护许可。¹
@@ -128,7 +180,7 @@ a{color:var(--accent)}
 <strong>因此哪条打折</strong>：「值得谈」保留，「按区域代理谈」打折。
 <strong>边界</strong>：这是从供货结构与法规要求推的，不是对方说过的需求。</p>
 <hr />
-<h2>4 异议应对表（按对话阶段排）</h2>
+<h2 id="sec7">4 异议应对表（按对话阶段排）</h2>
 <blockquote>
 <p>它会怎么拒、拿什么接、答不上怎么退。</p>
 </blockquote>
@@ -202,7 +254,7 @@ a{color:var(--accent)}
 </tbody>
 </table>
 <hr />
-<h2>5 开场与禁区</h2>
+<h2 id="sec8">5 开场与禁区</h2>
 <p><strong>开场（可直接念）</strong></p>
 <blockquote>
 <p>我们把沙特列进 2026 年重点市场。今天不是来换代理，也不要区域总代：我们在 SFDA 在册的是荧光 POCT 与干生化试纸，化学发光没注册，那条线不谈。看过你们的实验室四块业务，没有床旁这一格；NUPCO 第 10 项把化学、免疫与床旁放在同一档，NPT0025/26 的公告 6 月 14 日已发，计划 2027 年 1 月 1 日出结果。想谈两件：这一格开不开、第一年投几个人；以及我们产品注册证挂在谁名下，你们能不能做授权代表。</p>
@@ -221,7 +273,7 @@ a{color:var(--accent)}
 <li>NPT0025/26 那一轮，你们投没投？床旁由谁负责？</li>
 </ol>
 <hr />
-<h2>6 见面前五分钟</h2>
+<h2 id="sec9">6 见面前五分钟</h2>
 <ul>
 <li><strong>见谁</strong>：本轮未核到对方的岗位与授权层级；它是大型综合代理、决策链长，到场前先问清谁有签字权、谁管实验室线与床旁。</li>
 <li><strong>为什么见</strong>：贵司在册的床旁线要挂进它的分子与病理终端，不是让它做区域总代。</li>
@@ -229,7 +281,7 @@ a{color:var(--accent)}
 <li><strong>第一句说什么</strong>：「我们产品的注册证现在挂在谁名下，这一格还没定；今天想先确认你们能不能做我们的授权代表。」</li>
 </ul>
 <hr />
-<h2>7 边界与责任</h2>
+<h2 id="sec10">7 边界与责任</h2>
 <ul>
 <li>只用公开来源，未使用贵司内部资料。</li>
 <li>查不到的地方分五种写：未查到、打不开、不存在、未公开、未确认，不写成「没有」。</li>
@@ -239,7 +291,7 @@ a{color:var(--accent)}
 <li>贵司自身的公开披露数字逐条列在附件 C 末表，未计入六条判断的上标编号。</li>
 </ul>
 <hr />
-<h2>8 接下来 90 天</h2>
+<h2 id="sec11">8 接下来 90 天</h2>
 <table>
 <thead>
 <tr>
@@ -298,8 +350,8 @@ a{color:var(--accent)}
 </tbody>
 </table>
 <hr />
-<h1>附件</h1>
-<h2>A 证据附录</h2>
+<h1 id="appendix">附件</h1>
+<h2 id="sec13">A 证据附录</h2>
 <p>按判断顺序排。每条判断下面挂它依赖的证据；要核原文，看「原文」那一行的引文与链接。同一个主体的多篇材料只算一条，独立来源数按「最早出现」的域名去重。正文上标 ¹–⁶ 与下面判断 1–6 一一对应。下文「集团」指 Zahrawi Group，沙特实体为 Dar Al Zahrawi Medical Co LLC。</p>
 <hr />
 <h4>判断 1｜它能替贵司办准入，也能做持证方；注册证挂在谁名下才是第一问</h4>
@@ -394,7 +446,7 @@ a{color:var(--accent)}
 <li><strong>这条会错的情形</strong>：失效条件是这一轮投标期已截止而贵司未投，那时改谈下一轮与私立终端；延期不构成失效；NPT0025/26 与第 10 项是否同一个标，公开信息未见一一对应说明，若拆包则按新的分包标分别判断。</li>
 </ul>
 <hr />
-<h2>A 附：约束表（对方可能这样拒）</h2>
+<h2 id="sec14">A 附：约束表（对方可能这样拒）</h2>
 <table>
 <thead>
 <tr>
@@ -443,7 +495,7 @@ a{color:var(--accent)}
 </tr>
 </tbody>
 </table>
-<h2>附：本附录没做的事</h2>
+<h2 id="sec15">附：本附录没做的事</h2>
 <ul>
 <li>没有使用任何内部资料。</li>
 <li>没有承诺销量、中标或选型结果。</li>
@@ -452,7 +504,7 @@ a{color:var(--accent)}
 <li>未联系 Dar Al Zahrawi，未使用任何别家报告或内部数据。</li>
 </ul>
 <hr />
-<h2>B 同名与近名实体排除</h2>
+<h2 id="sec16">B 同名与近名实体排除</h2>
 <table>
 <thead>
 <tr>
@@ -480,7 +532,7 @@ a{color:var(--accent)}
 </tbody>
 </table>
 <p>旧名与沿革：本轮未查到更名记录。集团品牌与沙特实体须分开看，是本单最容易混的一处；SFDA 登记名的连写与官网写法的空格差异，按 CR 合并为同一家。</p>
-<h2>C 覆盖表：查不到的也列</h2>
+<h2 id="sec17">C 覆盖表：查不到的也列</h2>
 <table>
 <thead>
 <tr>
@@ -649,7 +701,7 @@ a{color:var(--accent)}
 </tr>
 </tbody>
 </table>
-<h2>D 漏查自评：最可能漏在哪</h2>
+<h2 id="sec18">D 漏查自评：最可能漏在哪</h2>
 <ol>
 <li><strong>贵司现有沙特代理是谁、排不排他。</strong> 只能证明公开渠道未见代理声明，不能证明没有代理。这条对合同结构的影响大于本文所有发现。补法：见面第一问，或由贵司内部给书面确认。</li>
 <li><strong>它到底有没有床旁。</strong> 只能证明官网四单元与公立供货记录里没有，不能证明它没做。补法：现场问，或请它出示床旁线的品牌授权与终端清单。</li>
@@ -657,10 +709,11 @@ a{color:var(--accent)}
 <li><strong>公立盘子是 2023 年版的那一份。</strong> 119 行与 0 行都出自 2023-04 的预中标公告；2024 年以后的标段未读。补法：读最新标段，或请对方给现役品牌清单。</li>
 <li><strong>沙特实体单独的营收、库存与服务工程师人数。</strong> 未披露，只能用集团口径替代；2026-11-15 补查招聘页，检索摘要显示沙特有 Service Engineer 岗位（原页 403，未留快照；仅索引摘要，不作承重依据），因此<strong>无法确认「没有工程师」</strong>，编制与在职均未证实。补法：查沙特工商登记，或要求对方提供装机清单与团队编制。</li>
 </ol>
-<h2>E 最弱的一环</h2>
+<h2 id="sec19">E 最弱的一环</h2>
 <p>这份判断最薄的地方是<strong>沙特实体这一层的规模</strong>：全篇没有它单独的营收、库存与服务工程师人数，只有集团五国合计（SAR 913M、547 人）与三样间接指标（45 张许可、2 张器械仓、公立 119 行供货）。这是标的类型限制：沙特私营分销商的分国财务不公开，不是检索不足。第二薄的是「床旁是新建一条线」，它靠四个技术单元的目录结构推出来，对方可能有没公开的床旁团队。</p>
 <hr />
 <p>海镜 HaiLens ｜ 合作邮箱：hji@hailenslab.com</p>
 </main>
 <footer class="foot"><span>海镜 HaiLens ｜ 合作邮箱：hji@hailenslab.com</span><span>公开示例：目标企业名与品牌已脱敏；数据与方法未改。</span></footer>
+<div class="jumpbar"><a class="pri" href="assets/sample.pdf" download>下载 PDF</a><a href="apply.html">申请定制</a><a href="#top">回到顶部</a></div>
 </body></html>
