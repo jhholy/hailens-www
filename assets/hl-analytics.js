@@ -15,7 +15,7 @@
 (function () {
   'use strict';
 
-  var CLARITY_ID = 'CLARITY_PROJECT_ID'; // ← 只改这一行
+  var CLARITY_ID = 'zgevk04agq'; // ← 只改这一行
   var KEY = 'hl_internal';
   var q = location.search || '';
   var host = location.hostname;
