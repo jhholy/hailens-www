@@ -8,7 +8,8 @@
  *   A 长期：在自己浏览器控制台执行一次
  *       localStorage.setItem('hl_internal','1')
  *     之后这台机器不再上报。撤销：localStorage.removeItem('hl_internal')
- *   B 临时：任意页面加 ?internal=1（会写进 localStorage，以后也不用再加）
+ *   B 一次搞定：用浏览器打开 https://hailenslab.com/?internal=1
+ *     （会写进 localStorage 并弹一个提示条，之后这台浏览器永久不再上报）
  *   C 兜底：Clarity 后台 → 设置 → 屏蔽 IP（只支持 IPv4），管住忘了设 A 的那次
  *   注：无痕模式不管用，照样会被统计。
  */
@@ -23,6 +24,15 @@
   /* —— 排除自己 —— */
   if (q.indexOf('internal=1') > -1) {
     try { localStorage.setItem(KEY, '1'); } catch (e) {}
+    try {
+      var b = document.createElement('div');
+      b.textContent = '✓ 本机已标记为内部访问，不再计入统计';
+      b.style.cssText = 'position:fixed;left:50%;transform:translateX(-50%);bottom:24px;z-index:9999;'
+        + 'background:#111;color:#fff;font:13px/1.6 -apple-system,system-ui,sans-serif;'
+        + 'padding:8px 14px;border-radius:6px;opacity:.92';
+      document.body.appendChild(b);
+      setTimeout(function () { b.remove(); }, 4000);
+    } catch (e) {}
   }
   var internal = false;
   try { internal = localStorage.getItem(KEY) === '1'; } catch (e) {}
