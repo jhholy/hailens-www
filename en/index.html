@@ -23,6 +23,9 @@
   .stat-t b{color:var(--ink);font-weight:500}
   .hero .act .link{font-size:14px;color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px}
   .hero .act .link:hover{color:var(--ink);border-color:var(--ink)}
+  .stat-n{display:flex;align-items:baseline;gap:10px}
+  .stat-arrow{font-size:.5em;color:var(--ink-3);transform:translateY(-4px)}
+  .stat-zero{color:var(--alert)}
   @media (max-width:640px){.stat-n{font-size:44px}.stat{padding:20px 22px}}
 </style>
 <script src="../assets/hl-analytics.js" defer></script>
@@ -51,8 +54,8 @@
     </p>
 
     <div class="stat">
-      <div class="stat-n">23</div>
-      <div class="stat-t">of the 109 Chinese manufacturers exhibiting at WHX Dubai 2027 hold active SFDA registrations and <b>no award line</b> in any NUPCO tender. One of them holds 105 active registrations.</div>
+      <div class="stat-n">105<span class="stat-arrow">→</span><span class="stat-zero">0</span></div>
+      <div class="stat-t">One Chinese manufacturer holds <b>105 active SFDA registrations</b> and has <b>no award line</b> in any of the 103,108 NUPCO award lines we counted. <b>Twenty-three</b> manufacturers exhibiting at WHX Dubai 2027 are in the same position — approved, and not being sold.</div>
     </div>
 
     <div class="act">
